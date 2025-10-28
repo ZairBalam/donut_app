@@ -80,9 +80,60 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
+            //carrito de compras
+            Container(
+              color: Colors.white,
+              padding: EdgeInsets.all(16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(left: 28),
+                    child: Column(
+                      //se pega a la izquierda
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          '2 Items | \$45.00',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          'Delivery charrges included',
+                          style: TextStyle(fontSize: 12),
+                        ),
+                      ],
+                    ),
+                  ),
+                  //botón de checkout
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.red,
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 24,
+                        vertical: 12,
+                      ),
+                    ),
+                    onPressed: () {},
+                    child: const Text(
+                      'View Cart',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 }
+
+class PanCakeTab {}
